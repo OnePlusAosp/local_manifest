@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <remote  name="unorom"
+           fetch="https://github.com/UnORoms/"
+           sync-j="4" />
+
+  <remote  name="gh"
+           fetch="https://github.com/"
+           sync-j="4" />
+
+  <project path="local_manifest" name="OnePlusAosp/local_manifest" remote="gh" revision="master" />
+  <project path="vendor/oneplus" name="TheMuppets/proprietary_vendor_oneplus" remote="gh" revision="cm-11.0" />
+  <project path="device/oneplus/bacon" name="CyanogenMod/android_device_oneplus_bacon" remote="gh" revision="cm-11.0" />
+
+  <remove-project name="kernel_oneplus_msm8974" />
+  <project path="kernel/oneplus/msm8974" name="OnePlusTech/android_kernel_oneplus_one" remote="gh" revision="master" />
+
+  <remove-project name="vendor_oppo_msm8974-common" />
+  <remove-project name="vendor_oppo_find5" />
+  <remove-project name="vendor_oppo_find7" />
+  <project path="vendor/oppo" name="TheMuppets/proprietary_vendor_oppo" remote="gh" revision="cm-11.0" />
+
+	
+</manifest>
