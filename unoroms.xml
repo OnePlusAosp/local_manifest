@@ -19,25 +19,23 @@
 
   <project path="local_manifest" name="local_manifest" remote="oa" revision="master" />
   <project path="vendor/oneplus" name="TheMuppets/proprietary_vendor_oneplus" remote="gh" revision="cm-11.0" />
+  <project path="vendor/oppo" name="TheMuppets/proprietary_vendor_oppo" remote="gh" revision="cm-11.0" />
+  <project path="vendor/pace" name="vendor_pace" remote="pace" revision="v4.4" />
+
   <project path="device/oneplus/bacon" name="android_device_oneplus_bacon" remote="oa" revision="v4.4" />
+  <project path="device/oppo/common" name="device_oppo_common" remote="pace" revision="v4.4" groups="device,find7" />
+  <project path="device/oppo/msm8974-common" name="device_oppo_msm8974-common" remote="pace" revision="v4.4" groups="device,find7" />
+  <project path="device/qcom/common" name="device_qcom_common" remote="pace" revision="v4.4" groups="qcom" />
 
   <project path="kernel/oneplus/msm8974" name="OnePlusTech/android_kernel_oneplus_one" remote="gh" revision="master" />
-  <project path="vendor/oppo" name="TheMuppets/proprietary_vendor_oppo" remote="gh" revision="cm-11.0" />
 
   <remove-project name="platform/build" />
   <project path="build" name="build" remote="pace" revision="v4.4" groups="pdk" >
     <copyfile src="core/root.mk" dest="Makefile" />
   </project>
 
-  
   <remove-project name="platform/bionic" />
   <project path="bionic" name="bionic" remote="pace" revision="v4.4" groups="pdk" />
-
-  <project path="device/oppo/common" name="device_oppo_common" remote="pace" revision="v4.4" groups="device,find7" />
-
-  <project path="device/oppo/msm8974-common" name="device_oppo_msm8974-common" remote="pace" revision="v4.4" groups="device,find7" />
-
-  <project path="device/qcom/common" name="device_qcom_common" remote="pace" revision="v4.4" groups="qcom" />
 
   <remove-project name="platform/external/bluetooth/bluedroid" />
   <project path="external/bluetooth/bluedroid" name="external_bluetooth_bluedroid" remote="pace" revision="v4.4" groups="pdk" />
@@ -47,7 +45,7 @@
 
   <remove-project name="platform/external/jpeg" />
   <project path="external/jpeg" name="external_jpeg" remote="pace" revision="v4.4" groups="pdk" />
-
+  
   <project path="external/qrngd" name="external_qrngd" groups="qcom" remote="pace" revision="v4.4" />
 
   <remove-project name="platform/external/tinyalsa" />
@@ -74,10 +72,7 @@
   <remove-project name="platform/hardware/libhardware_legacy" />
   <project path="hardware/libhardware_legacy" name="hardware_libhardware_legacy" remote="pace" revision="v4.4" groups="pdk" />
 
-<!--  <project path="hardware/msm7k" name="hardware_msm7k" remote="pace" revision="v4.4" /> -->
-
   <remove-project name="platform/hardware/qcom/audio" />
-  <project path="hardware/qcom/audio" name="hardware_qcom_audio" remote="pace" revision="v4.4" groups="qcom" />
 
   <project path="hardware/qcom/audio-caf" name="hardware_qcom_audio-caf" remote="pace" revision="v4.4" groups="qcom" />
 
@@ -85,9 +80,6 @@
   <project path="hardware/qcom/bt" name="hardware_qcom_bt" remote="pace" revision="v4.4" groups="qcom" />
 
   <remove-project name="platform/hardware/qcom/display" />
-  <project path="hardware/qcom/display" name="hardware_qcom_display" remote="pace" revision="v4.4" groups="qcom" />
-
-  <project path="hardware/qcom/display-caf" name="hardware_qcom_display-caf" remote="pace" revision="v4.4" groups="qcom" />
 
   <project path="hardware/qcom/display-caf-new" name="hardware_qcom_display-caf-new" remote="pace" revision="v4.4" groups="qcom" />
 
@@ -98,11 +90,7 @@
 
   <project path="hardware/qcom/media-caf-new" name="hardware_qcom_media-caf-new" remote="pace" revision="v4.4" groups="qcom" />
 
-
   <remove-project name="platform/hardware/qcom/media" />
-  <project path="hardware/qcom/media" name="hardware_qcom_media" remote="pace" revision="v4.4" groups="qcom" />
-
-  <project path="hardware/qcom/media-caf" name="hardware_qcom_media-caf" remote="pace" revision="v4.4" groups="qcom" />
 
   <remove-project name="platform/hardware/qcom/power" />
   <project path="hardware/qcom/power" name="hardware_qcom_power" remote="pace" revision="v4.4" groups="qcom" />
@@ -118,31 +106,11 @@
   
   <remove-project name="platform/packages/apps/Bluetooth" />
   <project path="packages/apps/Bluetooth" name="packages_apps_Bluetooth" remote="pace" revision="v4.4" />
-  
-  <remove-project name="platform/packages/apps/Settings" />
-  <project path="packages/apps/Settings" name="packages_apps_Settings" remote="pace" revision="v4.4" />
-
-  <remove-project name="platform/packages/inputmethods/LatinIME" />
-  <project path="packages/inputmethods/LatinIME" name="packages_inputmethods_LatinIME" remote="pace" revision="v4.4" />
- 
-<!--  <project path="prebuilts/gcc/darwin-x86/arm/arm-eabi-4.4.3" name="prebuilts_gcc_darwin-x86_arm_arm-eabi-4.4.3" remote="pace" revision="v4.4" groups="darwin,arm" />
-  
-  <project path="prebuilts/gcc/linux-x86/arm/arm-eabi-4.4.3" name="prebuilts_gcc_linux-x86_arm_arm-eabi-4.4.3" remote="pace" revision="v4.4" groups="linux,arm" />
--->
 
   <remove-project name="platform/system/core" />
   <project path="system/core" name="system_core" remote="pace" revision="v4.4" groups="pdk" />
 
-  <remove-project name="platform/system/extras" />
-  <project path="system/extras" name="system_extras" remote="pace" revision="v4.4" groups="pdk" />
-
   <remove-project name="platform/system/media" />
   <project path="system/media" name="system_media" remote="pace" revision="v4.4" groups="pdk" />
-
-  <remove-project name="platform/system/vold" />
-  <project path="system/vold" name="system_vold" remote="pace" revision="v4.4" groups="pdk" />
-
-  <project path="vendor/pace" name="vendor_pace" remote="pace" revision="v4.4" />
-    
 
 </manifest>
